@@ -23,7 +23,7 @@ function mousePressed(){
 }
 
 function draw() {
-  // frameRate(10)
+  //frameRate(3)
   for (var i = 0; i < bubbles.length; i++) {
     bubbles[i].move();
     bubbles[i].display();

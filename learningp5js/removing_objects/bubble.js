@@ -5,8 +5,9 @@ function Bubble(x,y) {
   this.lifespan = 255
   this.fcolor= [random(255),random(255),random(255)]
   this.display= function() {
-        fill(this.fcolor)
-        //fill(255,this.lifespan)
+        //fill(this.fcolor,this.lifespan)
+        fill(255,this.lifespan)
+        // noStroke()
         strokeWeight(1)
         //noFill();
         ellipse(this.x, this.y, this.size,this.size);
@@ -19,5 +20,13 @@ function Bubble(x,y) {
       
   this.clicked = function() {
     this.fcolor = [random(255),random(255),random(255)]
+  }
+  
+  this.isFinished = function(){
+    if(this.lifespan<0){
+      return true
+    } else {
+      return false
+    }
   }
     }
